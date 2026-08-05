@@ -27,6 +27,7 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
     <body>
@@ -391,10 +392,15 @@
 </style>
 
 
-       <!-- Carousel Start -->
-<div class="container-fluid carousel px-0 mb-5 pb-5">
-    <div id="carouselId" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
+      <!-- Carousel Start -->
+<div class="container-fluid carousel px-0">
+    <div id="carouselId"
+     class="carousel slide carousel-fade"
+     data-bs-ride="carousel"
+     data-bs-interval="3000"
+     data-bs-pause="false"
+     data-bs-touch="true"
+     data-bs-wrap="true">
         <!-- Indicators -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></button>
@@ -406,25 +412,25 @@
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="img/carousel-1.jpg" class="d-block w-100" alt="Pest Control">
+                <img src="img/carousel-1.jpg" class="carousel-img" alt="Pest Control">
 
-                <div class="carousel-caption d-flex align-items-center">
+                <div class="carousel-caption">
                     <div class="container">
 
-                        <h5 class="text-primary fw-bold animated fadeInDown">
+                        <h5 class="text-primary fw-bold">
                             Welcome to Prime Hygiene & Pest Solutions
                         </h5>
 
-                        <h1 class="display-2 text-white fw-bold mb-4 animated fadeInUp">
+                        <h1 class="display-2 text-white fw-bold mb-4">
                             Professional Pest Control Services
                         </h1>
 
-                        <p class="text-white fs-5 mb-4 animated fadeInUp">
+                        <p class="text-white fs-5 mb-4">
                             Safe, Reliable & Eco-Friendly Pest Control Solutions
                             for Homes, Offices, Hotels, Industries & Warehouses.
                         </p>
 
-                        <a href="service.html" class="btn btn-primary rounded-pill px-5 py-3 me-3">
+                        <a href="service.html" class="btn btn-primary rounded-pill px-5 py-3 me-2">
                             Our Services
                         </a>
 
@@ -439,9 +445,9 @@
             <!-- Slide 2 -->
             <div class="carousel-item">
 
-                <img src="img/carousel-2.jpg" class="d-block w-100" alt="Termite">
+                <img src="img/carousel-2.jpg" class="carousel-img" alt="Termite">
 
-                <div class="carousel-caption d-flex align-items-center">
+                <div class="carousel-caption">
                     <div class="container">
 
                         <h5 class="text-primary fw-bold">
@@ -457,7 +463,7 @@
                             using Government Approved Chemicals.
                         </p>
 
-                        <a href="contact.html" class="btn btn-primary rounded-pill px-5 py-3 me-3">
+                        <a href="contact.html" class="btn btn-primary rounded-pill px-5 py-3 me-2">
                             Book Inspection
                         </a>
 
@@ -467,15 +473,15 @@
 
                     </div>
                 </div>
+
             </div>
 
             <!-- Slide 3 -->
-
             <div class="carousel-item">
 
-                <img src="img/carousel-1.jpg" class="d-block w-100" alt="Industrial">
+                <img src="img/carousel-1.jpg" class="carousel-img" alt="Industrial">
 
-                <div class="carousel-caption d-flex align-items-center">
+                <div class="carousel-caption">
                     <div class="container">
 
                         <h5 class="text-primary fw-bold">
@@ -492,7 +498,7 @@
                         </p>
 
                         <a href="https://wa.me/917017732479" target="_blank"
-                           class="btn btn-success rounded-pill px-5 py-3 me-3">
+                           class="btn btn-success rounded-pill px-5 py-3 me-2">
                             WhatsApp Us
                         </a>
 
@@ -508,12 +514,10 @@
 
         </div>
 
-        <!-- Previous -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
 
-        <!-- Next -->
         <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
@@ -522,6 +526,190 @@
 </div>
 <!-- Carousel End -->
 
+<style>
+    /*==========================
+      RESPONSIVE CAROUSEL
+===========================*/
+
+.carousel{
+    overflow:hidden;
+}
+
+#carouselId,
+#carouselId .carousel-inner,
+#carouselId .carousel-item{
+    width:100%;
+}
+
+.carousel-item{
+    position:relative;
+}
+
+.carousel-img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+}
+
+.carousel-caption{
+    position:absolute;
+    inset:0;
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:rgba(0,0,0,.45);
+    padding:30px;
+}
+
+.carousel-caption .container{
+    max-width:900px;
+}
+
+.carousel-caption h5{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.carousel-caption h1{
+    font-size:60px;
+    line-height:1.2;
+}
+
+.carousel-caption p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.carousel-caption .btn{
+    min-width:180px;
+    margin:5px;
+}
+
+/* Large Screen */
+@media (max-width:1400px){
+
+    .carousel-img{
+        height:620px;
+    }
+
+    .carousel-caption h1{
+        font-size:52px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .carousel-img{
+        height:560px;
+    }
+
+    .carousel-caption h1{
+        font-size:46px;
+    }
+
+    .carousel-caption p{
+        font-size:18px;
+    }
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .carousel-img{
+        height:500px;
+    }
+
+    .carousel-caption{
+        padding:20px;
+    }
+
+    .carousel-caption h5{
+        font-size:18px;
+    }
+
+    .carousel-caption h1{
+        font-size:38px;
+    }
+
+    .carousel-caption p{
+        font-size:16px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .carousel-img{
+        height:420px;
+        object-fit:cover;
+    }
+
+    .carousel-caption{
+        padding:15px;
+    }
+
+    .carousel-caption h5{
+        font-size:15px;
+    }
+
+    .carousel-caption h1{
+        font-size:28px;
+        margin-bottom:12px;
+    }
+
+    .carousel-caption p{
+        font-size:14px;
+        margin-bottom:18px;
+    }
+
+    .carousel-caption .btn{
+        width:180px;
+        padding:10px;
+        font-size:14px;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:576px){
+
+    .carousel-img{
+        height:340px;
+        object-fit:cover;
+    }
+
+    .carousel-caption h5{
+        font-size:13px;
+    }
+
+    .carousel-caption h1{
+        font-size:22px;
+    }
+
+    .carousel-caption p{
+        display:none;
+    }
+
+    .carousel-caption .btn{
+        display:block;
+        width:180px;
+        margin:8px auto;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev{
+        display:none;
+    }
+
+}
+</style>
         
       <!-- Get In Touch Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay=".3s">
@@ -617,14 +805,14 @@
     <h6 class="fw-bold">Serving Since</h6>
 </div>
 
-<style>
+<st>
 .since-year{
     font-size:42px;
     font-weight:700;
     line-height:1;
     margin-bottom:8px;
 }
-</style>
+</st>
                 </div>
             </div>
 
